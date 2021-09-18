@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+.circle{
+	display: block;
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border: 50px solid black;
+	border-radius: 50%;
+}
+.loader{
+	display: block;
+	position: relative;
+	height: 50px;
+	width: 300px;
+	animation: anime 2s linear infinite;
+}
+span{
+	display: block;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+span:nth-child(1){
+	top: 0;
+	left: 0;
+	background-color: red;
+	box-shadow: 1px 1px 60px red,
+				1px 1px 60px red;
+}
+span:nth-child(2){
+	top: 0;
+	right: 0;
+	background-color: dodgerblue;
+	box-shadow: 1px 1px 60px dodgerblue,
+				1px 1px 60px dodgerblue;
+}
+@keyframes anime{
+	100%{
+		transform: rotate(360deg);
+	}
+}
